@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
@@ -13,6 +14,16 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        //
+        $categories = [
+            ['name' => 'Desktop računari'],
+            ['name' => 'Laptop računari'],
+            ['name' => 'Monitori'],
+            ['name' => 'Periferija'],
+            ['name' => 'Mrežna oprema'],
+        ];
+
+        foreach ($categories as $category) {
+            Category::create($category);
+        }
     }
 }
