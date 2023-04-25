@@ -17,6 +17,7 @@ const axiosInstance = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
   });
 function Example() {
+    const[token,setToken] = useState();
 
     const [products,setProducts] = useState([ ]);
 
@@ -56,7 +57,7 @@ function Example() {
 
              <Routes>
              <Route path="/" element={ <Pocetna></Pocetna>}></Route>
-             <Route path="/login" element={ <Login></Login>}></Route>
+             <Route path="/login" element={ <Login addToken={setToken}></Login>}></Route>
              <Route path="/register" element={ <Register></Register>}></Route>
              <Route path="/kontakt" element={ <Kontakt></Kontakt>}></Route>
              <Route path="/ponuda" element={ <Ponuda products={products}></Ponuda>}></Route>

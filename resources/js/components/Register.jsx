@@ -17,6 +17,7 @@ const Register = () => {
         .then((res)=>{  
             console.log(res.data);
             //nakonn sto se registruje da ga posaljemo na stranicu za login
+            alert("USPEH!");
             navigate("/login");
         })
         .catch(function (error) {
