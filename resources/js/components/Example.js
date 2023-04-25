@@ -8,6 +8,7 @@ import './App.css';
 import Pocetna from './Pocetna';
 import Login from './Login';
 import Register from './Register';
+import Kontakt from './Kontakt';
 function Example() {
     return (
         <BrowserRouter >
@@ -17,6 +18,7 @@ function Example() {
              <Route path="/" element={ <Pocetna></Pocetna>}></Route>
              <Route path="/login" element={ <Login></Login>}></Route>
              <Route path="/register" element={ <Register></Register>}></Route>
+             <Route path="/kontakt" element={ <Kontakt></Kontakt>}></Route>
 
              </Routes>
 

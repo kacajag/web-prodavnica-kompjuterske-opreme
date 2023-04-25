@@ -9609,14 +9609,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./resources/js/components/Navbar.jsx");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./App.css */ "./resources/js/components/App.css");
 /* harmony import */ var _Pocetna__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Pocetna */ "./resources/js/components/Pocetna.jsx");
 /* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Login */ "./resources/js/components/Login.jsx");
 /* harmony import */ var _Register__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Register */ "./resources/js/components/Register.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Kontakt__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Kontakt */ "./resources/js/components/Kontakt.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -9630,24 +9632,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Example() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.BrowserRouter, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Routes, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.BrowserRouter, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Routes, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
         path: "/",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pocetna__WEBPACK_IMPORTED_MODULE_6__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pocetna__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
         path: "/login",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Login__WEBPACK_IMPORTED_MODULE_7__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Login__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
         path: "/register",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Register__WEBPACK_IMPORTED_MODULE_8__["default"], {})
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Register__WEBPACK_IMPORTED_MODULE_8__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
+        path: "/kontakt",
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Kontakt__WEBPACK_IMPORTED_MODULE_9__["default"], {})
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
   });
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Example);
 if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(Example, {}), document.getElementById('example'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(Example, {}), document.getElementById('example'));
 }
 
 /***/ }),
@@ -9684,6 +9689,50 @@ function Footer() {
   });
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ }),
+
+/***/ "./resources/js/components/Kontakt.jsx":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Kontakt.jsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var Kontakt = function Kontakt() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "contact-page-container",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+      children: "Kontakt informacije"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Adresa: 123 Ulica, Grad, Dr\u017Eava"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Telefon: +381 12 345 6789"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Email: info@primer.com"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "map-container",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("iframe", {
+        title: "Google Maps",
+        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.628445030636!2d-122.3988958852987!3d37.78923137965833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f503c3b09%3A0x52f10a3a90e090c0!2s101%20California%20St%2C%20San%20Francisco%2C%20CA%2094104%2C%20USA!5e0!3m2!1sen!2srs!4v1638545647439!5m2!1sen!2srs",
+        width: "600",
+        height: "450",
+        allowFullScreen: "",
+        loading: "lazy"
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Kontakt);
 
 /***/ }),
 
@@ -15171,7 +15220,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\r\n    background-color: #333;\r\n    overflow: hidden;\r\n  }\r\n  \r\n  .topnav a {\r\n    float: left;\r\n    color: #f2f2f2;\r\n    text-align: center;\r\n    padding: 14px 16px;\r\n    text-decoration: none;\r\n  }\r\n  \r\n  .topnav a:hover {\r\n    background-color: #ddd;\r\n    color: black;\r\n  }\r\n  \r\n  .topnav a.active {\r\n    background-color: #4CAF50;\r\n    color: white;\r\n  }\r\n  \r\n\r\n  .site-footer {\r\n    background-color: #333;\r\n    color: #fff;\r\n    padding: 30px 0;\r\n    font-size: 14px;\r\n  }\r\n  \r\n  .site-footer p {\r\n    margin-bottom: 0;\r\n  }\r\n  \r\n  .container {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n  }\r\n  \r\n  .col-md-8 {\r\n    width: 66.66667%;\r\n  }\r\n  \r\n  .col-sm-6 {\r\n    width: 50%;\r\n  }\r\n  \r\n  .col-xs-12 {\r\n    width: 100%;\r\n  }\r\n  \r\n\r\n\r\n\r\n  .container {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n  }\r\n  \r\n  .jumbotron {\r\n    background-color: #f8f9fa;\r\n    padding: 2rem 1rem;\r\n    margin-bottom: 2rem;\r\n    border-radius: 0.3rem;\r\n  }\r\n  .banner-image {\r\n    max-width: 100%;\r\n    height: auto;\r\n    display: block;\r\n    margin: 0 auto;\r\n    position: relative;\r\n  }\r\n  \r\n  .overlay-text {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    color: black;\r\n    text-align: center;\r\n    background-color: rgba(211, 211, 211, 0.8); /* lightgray sa 80% providnosti */\r\n  }\r\n  .content {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    gap: 2rem;\r\n  }\r\n  \r\n  section {\r\n    flex: 1;\r\n    min-width: 300px;\r\n  }\r\n  \r\n  @media (max-width: 768px) {\r\n    .content {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n  \r\n\r\n  .login-form-container {\r\n    max-width: 400px;\r\n    margin: 2rem auto;\r\n    padding: 1rem;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n    border-radius: 0.5rem;\r\n    margin-bottom: 5%;\r\n    margin-top: 5%;\r\n\r\n  }\r\n  \r\n  .login-form {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n  \r\n  .login-form label {\r\n    margin-top: 1rem;\r\n    margin-bottom: 0.25rem;\r\n  }\r\n  \r\n  .login-form input {\r\n    padding: 0.5rem;\r\n    border: 1px solid #ccc;\r\n    border-radius: 0.25rem;\r\n  }\r\n  \r\n  .login-form button {\r\n    margin-top: 1rem;\r\n    padding: 0.5rem;\r\n    background-color: #007bff;\r\n    color: #fff;\r\n    border: none;\r\n    border-radius: 0.25rem;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .login-form button:hover {\r\n    background-color: #0056b3;\r\n  }\r\n  \r\n\r\n  .registration-form-container {\r\n    max-width: 400px;\r\n    margin: 2rem auto;\r\n    padding: 1rem;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n    border-radius: 0.5rem;\r\n  }\r\n  \r\n  .registration-form {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n  \r\n  .registration-form label {\r\n    margin-top: 1rem;\r\n    margin-bottom: 0.25rem;\r\n  }\r\n  \r\n  .registration-form input {\r\n    padding: 0.5rem;\r\n    border: 1px solid #ccc;\r\n    border-radius: 0.25rem;\r\n  }\r\n  \r\n  .registration-form button {\r\n    margin-top: 1rem;\r\n    padding: 0.5rem;\r\n    background-color: #007bff;\r\n    color: #fff;\r\n    border: none;\r\n    border-radius: 0.25rem;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .registration-form button:hover {\r\n    background-color: #0056b3;\r\n  }\r\n  ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\r\n    background-color: #333;\r\n    overflow: hidden;\r\n  }\r\n  \r\n  .topnav a {\r\n    float: left;\r\n    color: #f2f2f2;\r\n    text-align: center;\r\n    padding: 14px 16px;\r\n    text-decoration: none;\r\n  }\r\n  \r\n  .topnav a:hover {\r\n    background-color: #ddd;\r\n    color: black;\r\n  }\r\n  \r\n  .topnav a.active {\r\n    background-color: #4CAF50;\r\n    color: white;\r\n  }\r\n  \r\n\r\n  .site-footer {\r\n    background-color: #333;\r\n    color: #fff;\r\n    padding: 30px 0;\r\n    font-size: 14px;\r\n  }\r\n  \r\n  .site-footer p {\r\n    margin-bottom: 0;\r\n  }\r\n  \r\n  .container {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n  }\r\n  \r\n  .col-md-8 {\r\n    width: 66.66667%;\r\n  }\r\n  \r\n  .col-sm-6 {\r\n    width: 50%;\r\n  }\r\n  \r\n  .col-xs-12 {\r\n    width: 100%;\r\n  }\r\n  \r\n\r\n\r\n\r\n  .container {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n  }\r\n  \r\n  .jumbotron {\r\n    background-color: #f8f9fa;\r\n    padding: 2rem 1rem;\r\n    margin-bottom: 2rem;\r\n    border-radius: 0.3rem;\r\n  }\r\n  .banner-image {\r\n    max-width: 100%;\r\n    height: auto;\r\n    display: block;\r\n    margin: 0 auto;\r\n    position: relative;\r\n  }\r\n  \r\n  .overlay-text {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    color: black;\r\n    text-align: center;\r\n    background-color: rgba(211, 211, 211, 0.8); /* lightgray sa 80% providnosti */\r\n  }\r\n  .content {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    gap: 2rem;\r\n  }\r\n  \r\n  section {\r\n    flex: 1;\r\n    min-width: 300px;\r\n  }\r\n  \r\n  @media (max-width: 768px) {\r\n    .content {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n  \r\n\r\n  .login-form-container {\r\n    max-width: 400px;\r\n    margin: 2rem auto;\r\n    padding: 1rem;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n    border-radius: 0.5rem;\r\n    margin-bottom: 5%;\r\n    margin-top: 5%;\r\n\r\n  }\r\n  \r\n  .login-form {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n  \r\n  .login-form label {\r\n    margin-top: 1rem;\r\n    margin-bottom: 0.25rem;\r\n  }\r\n  \r\n  .login-form input {\r\n    padding: 0.5rem;\r\n    border: 1px solid #ccc;\r\n    border-radius: 0.25rem;\r\n  }\r\n  \r\n  .login-form button {\r\n    margin-top: 1rem;\r\n    padding: 0.5rem;\r\n    background-color: #007bff;\r\n    color: #fff;\r\n    border: none;\r\n    border-radius: 0.25rem;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .login-form button:hover {\r\n    background-color: #0056b3;\r\n  }\r\n  \r\n\r\n  .registration-form-container {\r\n    max-width: 400px;\r\n    margin: 2rem auto;\r\n    padding: 1rem;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n    border-radius: 0.5rem;\r\n  }\r\n  \r\n  .registration-form {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n  \r\n  .registration-form label {\r\n    margin-top: 1rem;\r\n    margin-bottom: 0.25rem;\r\n  }\r\n  \r\n  .registration-form input {\r\n    padding: 0.5rem;\r\n    border: 1px solid #ccc;\r\n    border-radius: 0.25rem;\r\n  }\r\n  \r\n  .registration-form button {\r\n    margin-top: 1rem;\r\n    padding: 0.5rem;\r\n    background-color: #007bff;\r\n    color: #fff;\r\n    border: none;\r\n    border-radius: 0.25rem;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .registration-form button:hover {\r\n    background-color: #0056b3;\r\n  }\r\n  \r\n\r\n  .contact-page-container {\r\n    max-width: 800px;\r\n    margin: 2rem auto;\r\n    padding: 1rem;\r\n    text-align: center;\r\n  }\r\n  \r\n  .map-container {\r\n    margin-top: 2rem;\r\n    display: flex;\r\n    justify-content: center;\r\n  }\r\n  \r\n  iframe {\r\n    border: none;\r\n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
