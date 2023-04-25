@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -9,7 +9,46 @@ import Pocetna from './Pocetna';
 import Login from './Login';
 import Register from './Register';
 import Kontakt from './Kontakt';
+import axios from "axios";
+
+
+const axiosInstance = axios.create({
+    baseURL: process.env.REACT_APP_API_URL,
+  });
 function Example() {
+
+    const [products,setProducts] = useState([ ]);
+
+
+
+    useEffect(() => {
+        const getProducts = async () => {
+          try {
+            const res = await axiosInstance.get( "http://127.0.0.1:8000/api/products",
+              {
+                // headers: 
+                // {
+                //     'Authorization': `Bearer ${window.sessionStorage.getItem("auth_token")}`
+                // }
+              }
+            );
+            setProducts(res.data.data);
+            console.log(res.data.data)
+          } catch (err) {
+            console.log(err);
+          }
+        };
+        getProducts();
+      }, [ axiosInstance]);
+
+
+
+
+
+
+
+
+
     return (
         <BrowserRouter >
            <Navbar></Navbar>
