@@ -9698,7 +9698,8 @@ function Example() {
   }, [axiosInstance]);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.BrowserRouter, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      token: token
+      token: token,
+      addToken: setToken
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Routes, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
         path: "/",
@@ -9991,7 +9992,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Navbar(_ref) {
-  var token = _ref.token;
+  var token = _ref.token,
+    addToken = _ref.addToken;
   function handleLogout() {
     var config = {
       method: 'post',
@@ -10006,6 +10008,7 @@ function Navbar(_ref) {
       window.sessionStorage.setItem('auth_token', null);
       window.sessionStorage.setItem('auth_name', null);
       window.sessionStorage.setItem('auth_id', null);
+      addToken(null);
     })["catch"](function (error) {
       console.log(error);
     });
@@ -10173,19 +10176,38 @@ var ProductCard = function ProductCard(_ref) {
         return 'default';
     }
   };
+  var addToCart = function addToCart() {
+    // Implementirajte funkciju za dodavanje proizvoda u korpu
+  };
+  var removeFromCart = function removeFromCart() {
+    // Implementirajte funkciju za uklanjanje proizvoda iz korpe
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    className: "product-card ".concat(getCategoryColor(category.id)),
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-      src: image,
-      alt: name
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "product-info",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+    className: "product-card",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+        src: image,
+        alt: name
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+        className: "product-card-category ".concat(getCategoryColor(product.category.id)),
+        children: product.category.name
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
         children: name
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
         children: description
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
         children: [price, " RSD"]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "product-buttons",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+        className: "button",
+        onClick: addToCart,
+        children: "+"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+        className: "button",
+        onClick: removeFromCart,
+        children: "-"
       })]
     })]
   });

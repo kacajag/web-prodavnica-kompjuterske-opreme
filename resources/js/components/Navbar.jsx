@@ -1,7 +1,7 @@
  
 import { Link } from 'react-router-dom'
 
-function Navbar({token}) {
+function Navbar({token,addToken}) {
   function handleLogout(){ 
    
      
@@ -23,7 +23,7 @@ function Navbar({token}) {
       window.sessionStorage.setItem('auth_token',null); 
       window.sessionStorage.setItem('auth_name',null); 
       window.sessionStorage.setItem('auth_id',null); 
-      
+      addToken(null)
 
     })
     .catch(function (error) {

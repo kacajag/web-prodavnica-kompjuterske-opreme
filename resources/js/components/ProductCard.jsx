@@ -21,14 +21,29 @@ const ProductCard = ({ product }) => {
         return 'default';
     }
   };
+  const addToCart = () => {
+    // Implementirajte funkciju za dodavanje proizvoda u korpu
+  };
 
+  const removeFromCart = () => {
+    // Implementirajte funkciju za uklanjanje proizvoda iz korpe
+  };
   return (
-    <div className={`product-card ${getCategoryColor(category.id)}`}>
-      <img src={image} alt={name} />
-      <div className="product-info">
+    <div className="product-card">
+      <div>
+        <img src={image} alt={name} />
+        <p className={`product-card-category ${getCategoryColor(product.category.id)}`}>{product.category.name}</p>
         <h3>{name}</h3>
         <p>{description}</p>
         <p>{price} RSD</p>
+      </div>
+      <div className="product-buttons">
+        <button className="button" onClick={addToCart}>
+          +
+        </button>
+        <button className="button" onClick={removeFromCart}>
+          -
+        </button>
       </div>
     </div>
   );
