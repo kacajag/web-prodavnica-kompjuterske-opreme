@@ -36,13 +36,35 @@ function Navbar({token}) {
   }
   return (
     <div className="topnav">
-        <Link  to="/">Pocetna</Link>
-        <Link to="/ponuda">Ponuda</Link>
 
-        <Link    to="/kontakt">Kontakt</Link>
-        <Link    to="/login">Login</Link>
+    {token == null ?   //ako nije ulogovan moze da se uloguje ili registruje
+      <>
+       <Link  to="/">Pocetna</Link>
+       <Link  to="/kontakt">Kontakt</Link>
+       <Link    to="/login">Login</Link>
         <Link    to="/register">Register</Link>
-        <Link   onClick={handleLogout} to="/">Odjava</Link>
+      </>
+
+      :
+      <>
+        {window.sessionStorage.getItem("auth_name")=='Admin'  ? 
+            <>
+
+            </>
+            :
+            <>
+            <Link to="/ponuda">Ponuda</Link>
+
+            </>
+
+        }
+         <Link   onClick={handleLogout} to="/">Odjava</Link>
+      </>
+  }
+       
+
+       
+       
  
        
      
