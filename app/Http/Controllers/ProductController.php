@@ -96,7 +96,7 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
         $validator = Validator::make(
             $request->all(),
@@ -113,7 +113,7 @@ class ProductController extends Controller
             return response()->json($validator->errors());
 
 
-        $l=Product::find($request->id);
+        $l=Product::find($id);
         if($l){
             $l->name = $request->name;
             $l->description = $request->description;
