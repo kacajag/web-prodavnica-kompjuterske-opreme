@@ -179,7 +179,6 @@
     background-color: #0056b3;
   }
   
-
   .contact-page-container {
     max-width: 800px;
     margin: 2rem auto;
@@ -189,10 +188,11 @@
   
   .map-container {
     margin-top: 2rem;
-    display: flex;
-    justify-content: center;
+    height: 400px; /* Dodajte visinu mape */
+    width: 100%; /* Dodajte širinu mape */
   }
   
   iframe {
     border: none;
   }
+  
