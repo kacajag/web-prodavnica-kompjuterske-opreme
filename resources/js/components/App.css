@@ -196,3 +196,47 @@
     border: none;
   }
   
+
+  .product-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+  }
+  
+  .product-card .product-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Dodajte boje za kategorije */
+  .category1 {
+    background-color: #ffc107;
+  }
+  
+  .category2 {
+    background-color: #28a745;
+  }
+  .category3 {
+    background-color: #2e68c0;
+  }.category4 {
+    background-color: #3ca765;
+  }.category5 {
+    background-color: #c26089;
+  }
+  /* Dodajte više kategorija ako je potrebno */
+  
+  /* Default boja */
+  .default {
+    background-color: #f8f9fa;
+  }
+  
