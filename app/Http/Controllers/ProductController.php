@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
@@ -36,7 +37,34 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'name' =>  'required' , 
+                'description' => 'required|string|max:100', 
+                'price' => 'required',
+                'category_id' => 'required'  ,
+                'image' =>'  '
+
+            ]
+        );
+        if ($validator->fails()) 
+            return response()->json($validator->errors());
+
+
+         
+            
+
+        $p = Product::create([
+                'name' =>   $request->name, 
+                'description' => $request->description, 
+                'price' =>  $request->price,                
+                'category_id' =>  $request->category_id, 
+                'image' =>  $request->image, 
+                 
+           
+        ]);
+        return response()->json(["Uspesno kreiran proizvod",$p]);
     }
 
     /**
@@ -45,9 +73,9 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        return new ProductResource(Product::find($id));
     }
 
     /**
@@ -70,7 +98,33 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'name' =>  'required' , 
+                'description' => 'required|string|max:250', 
+                'price' => 'required',
+                'category_id' => 'required'  ,
+                'image' =>'  '
+
+            ]
+        );
+        if ($validator->fails()) 
+            return response()->json($validator->errors());
+
+
+        $l=Product::find($request->id);
+        if($l){
+            $l->name = $request->name;
+            $l->description = $request->description;
+            $l->price = $request->price;
+            $l->category_id  = $request->category_id;
+            $l->image = $request->image; 
+            $l->save();
+            return response()->json(['Proizvod uspesno izmenjen!', new ProductResource($l)]);
+        }else{
+            return response()->json('Trazeni objekat ne postoji u bazi');
+        }
     }
 
     /**
@@ -79,8 +133,17 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $p = Product::find($id);
+        if($p){ 
+            $p->delete();
+            return response()->json("uspesno obrisano!" );
+        } else {
+
+            return response()->json([
+                'message' => 'Ne postoji u bazi.',
+            ], 400);
+        }
     }
 }
