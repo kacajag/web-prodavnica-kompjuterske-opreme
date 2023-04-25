@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Pocetna from './Pocetna';
 import Login from './Login';
+import Register from './Register';
 function Example() {
     return (
         <BrowserRouter >
@@ -15,6 +16,7 @@ function Example() {
              <Routes>
              <Route path="/" element={ <Pocetna></Pocetna>}></Route>
              <Route path="/login" element={ <Login></Login>}></Route>
+             <Route path="/register" element={ <Register></Register>}></Route>
 
              </Routes>
 

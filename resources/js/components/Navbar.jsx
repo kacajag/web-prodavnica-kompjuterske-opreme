@@ -7,6 +7,7 @@ function Navbar() {
         <Link to="/">Pocetna</Link>
         <Link to="/kontakt">Kontakt</Link>
         <Link to="/login">Login</Link>
+        <Link to="/register">Register</Link>
      
         
 
