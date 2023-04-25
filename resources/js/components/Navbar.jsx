@@ -1,15 +1,50 @@
  
 import { Link } from 'react-router-dom'
 
-function Navbar() {
+function Navbar({token}) {
+  function handleLogout(){ 
+   
+     
+    var config = {
+      method: 'post',
+      url: '/api/logout',
+      headers: { 
+        'Authorization': 'Bearer '+window.sessionStorage.getItem("auth_token")
+        
+      },
+    };
+    console.log(window.sessionStorage.getItem("auth_token"))
+    
+    axios(config)
+    .then(function (response) {
+     
+      console.log(response);
+     
+      window.sessionStorage.setItem('auth_token',null); 
+      window.sessionStorage.setItem('auth_name',null); 
+      window.sessionStorage.setItem('auth_id',null); 
+      
+
+    })
+    .catch(function (error) {
+     
+      
+      console.log(error);
+      
+
+    }); 
+  }
   return (
     <div className="topnav">
-        <Link to="/">Pocetna</Link>
+        <Link  to="/">Pocetna</Link>
         <Link to="/ponuda">Ponuda</Link>
 
-        <Link to="/kontakt">Kontakt</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
+        <Link    to="/kontakt">Kontakt</Link>
+        <Link    to="/login">Login</Link>
+        <Link    to="/register">Register</Link>
+        <Link   onClick={handleLogout} to="/">Odjava</Link>
+ 
+       
      
         
 

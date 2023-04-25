@@ -20,7 +20,14 @@
     background-color: #4CAF50;
     color: white;
   }
-  
+  .topnav .nav-item {
+    /* Stilovi koje trenutno koristite za Link elemente, npr: */
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    display: inline-block;
+    /* ... */
+  }
 
   .site-footer {
     background-color: #333;
@@ -198,10 +205,23 @@
   
 
   .product-card {
-    display: flex;
-    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    height: 400px;
     padding: 1rem;
-    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .product-card-category {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.25rem;
+    border-radius: 4px;
+    width: fit-content;
     margin-bottom: 1rem;
   }
   
@@ -240,3 +260,18 @@
     background-color: #f8f9fa;
   }
   
+  .button-product {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    width: 48%;
+  }
+  
+  .button-product:hover {
+    background-color: #e6e6e6;
+  }

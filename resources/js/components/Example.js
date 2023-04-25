@@ -53,11 +53,13 @@ function Example() {
 
     return (
         <BrowserRouter >
-           <Navbar></Navbar>
+           <Navbar token={token}></Navbar>
 
              <Routes>
              <Route path="/" element={ <Pocetna></Pocetna>}></Route>
              <Route path="/login" element={ <Login addToken={setToken}></Login>}></Route>
+            
+
              <Route path="/register" element={ <Register></Register>}></Route>
              <Route path="/kontakt" element={ <Kontakt></Kontakt>}></Route>
              <Route path="/ponuda" element={ <Ponuda products={products}></Ponuda>}></Route>
