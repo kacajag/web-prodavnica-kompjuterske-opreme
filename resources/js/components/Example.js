@@ -10,6 +10,7 @@ import Login from './Login';
 import Register from './Register';
 import Kontakt from './Kontakt';
 import axios from "axios";
+import Ponuda from './Ponuda';
 
 
 const axiosInstance = axios.create({
@@ -58,6 +59,7 @@ function Example() {
              <Route path="/login" element={ <Login></Login>}></Route>
              <Route path="/register" element={ <Register></Register>}></Route>
              <Route path="/kontakt" element={ <Kontakt></Kontakt>}></Route>
+             <Route path="/ponuda" element={ <Ponuda products={products}></Ponuda>}></Route>
 
              </Routes>
 
