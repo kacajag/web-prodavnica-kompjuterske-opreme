@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Pocetna from './Pocetna';
+import Login from './Login';
 function Example() {
     return (
         <BrowserRouter >
@@ -13,6 +14,7 @@ function Example() {
 
              <Routes>
              <Route path="/" element={ <Pocetna></Pocetna>}></Route>
+             <Route path="/login" element={ <Login></Login>}></Route>
 
              </Routes>
 

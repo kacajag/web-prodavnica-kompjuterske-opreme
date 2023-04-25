@@ -9609,12 +9609,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./resources/js/components/Navbar.jsx");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./App.css */ "./resources/js/components/App.css");
 /* harmony import */ var _Pocetna__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Pocetna */ "./resources/js/components/Pocetna.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Login */ "./resources/js/components/Login.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -9626,18 +9628,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Example() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Routes, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Routes, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
         path: "/",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Pocetna__WEBPACK_IMPORTED_MODULE_6__["default"], {})
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Pocetna__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+        path: "/login",
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Login__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
   });
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Example);
 if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(Example, {}), document.getElementById('example'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(Example, {}), document.getElementById('example'));
 }
 
 /***/ }),
@@ -9677,6 +9682,62 @@ function Footer() {
 
 /***/ }),
 
+/***/ "./resources/js/components/Login.jsx":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Login.jsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var Login = function Login() {
+  var handleSubmit = function handleSubmit(event) {
+    event.preventDefault();
+    // Ovde dodajte funkcionalnost za slanje podataka za prijavu
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "login-form-container",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
+      onSubmit: handleSubmit,
+      className: "login-form",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+        children: "Prijava"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+        htmlFor: "email",
+        children: "E-mail:"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+        type: "email",
+        id: "email",
+        name: "email",
+        required: true
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+        htmlFor: "password",
+        children: "Lozinka:"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+        type: "password",
+        id: "password",
+        name: "password",
+        required: true
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+        type: "submit",
+        children: "Prijavi se"
+      })]
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Login);
+
+/***/ }),
+
 /***/ "./resources/js/components/Navbar.jsx":
 /*!********************************************!*\
   !*** ./resources/js/components/Navbar.jsx ***!
@@ -9702,6 +9763,9 @@ function Navbar() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
       to: "/kontakt",
       children: "Kontakt"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+      to: "/login",
+      children: "Login"
     })]
   });
 }
@@ -15035,7 +15099,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\r\n    background-color: #333;\r\n    overflow: hidden;\r\n  }\r\n  \r\n  .topnav a {\r\n    float: left;\r\n    color: #f2f2f2;\r\n    text-align: center;\r\n    padding: 14px 16px;\r\n    text-decoration: none;\r\n  }\r\n  \r\n  .topnav a:hover {\r\n    background-color: #ddd;\r\n    color: black;\r\n  }\r\n  \r\n  .topnav a.active {\r\n    background-color: #4CAF50;\r\n    color: white;\r\n  }\r\n  \r\n\r\n  .site-footer {\r\n    background-color: #333;\r\n    color: #fff;\r\n    padding: 30px 0;\r\n    font-size: 14px;\r\n  }\r\n  \r\n  .site-footer p {\r\n    margin-bottom: 0;\r\n  }\r\n  \r\n  .container {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n  }\r\n  \r\n  .col-md-8 {\r\n    width: 66.66667%;\r\n  }\r\n  \r\n  .col-sm-6 {\r\n    width: 50%;\r\n  }\r\n  \r\n  .col-xs-12 {\r\n    width: 100%;\r\n  }\r\n  \r\n\r\n\r\n\r\n  .container {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n  }\r\n  \r\n  .jumbotron {\r\n    background-color: #f8f9fa;\r\n    padding: 2rem 1rem;\r\n    margin-bottom: 2rem;\r\n    border-radius: 0.3rem;\r\n  }\r\n  .banner-image {\r\n    max-width: 100%;\r\n    height: auto;\r\n    display: block;\r\n    margin: 0 auto;\r\n    position: relative;\r\n  }\r\n  \r\n  .overlay-text {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    color: black;\r\n    text-align: center;\r\n    background-color: lightgray;\r\n  }\r\n  .content {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    gap: 2rem;\r\n  }\r\n  \r\n  section {\r\n    flex: 1;\r\n    min-width: 300px;\r\n  }\r\n  \r\n  @media (max-width: 768px) {\r\n    .content {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n  \r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\r\n    background-color: #333;\r\n    overflow: hidden;\r\n  }\r\n  \r\n  .topnav a {\r\n    float: left;\r\n    color: #f2f2f2;\r\n    text-align: center;\r\n    padding: 14px 16px;\r\n    text-decoration: none;\r\n  }\r\n  \r\n  .topnav a:hover {\r\n    background-color: #ddd;\r\n    color: black;\r\n  }\r\n  \r\n  .topnav a.active {\r\n    background-color: #4CAF50;\r\n    color: white;\r\n  }\r\n  \r\n\r\n  .site-footer {\r\n    background-color: #333;\r\n    color: #fff;\r\n    padding: 30px 0;\r\n    font-size: 14px;\r\n  }\r\n  \r\n  .site-footer p {\r\n    margin-bottom: 0;\r\n  }\r\n  \r\n  .container {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n  }\r\n  \r\n  .col-md-8 {\r\n    width: 66.66667%;\r\n  }\r\n  \r\n  .col-sm-6 {\r\n    width: 50%;\r\n  }\r\n  \r\n  .col-xs-12 {\r\n    width: 100%;\r\n  }\r\n  \r\n\r\n\r\n\r\n  .container {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n  }\r\n  \r\n  .jumbotron {\r\n    background-color: #f8f9fa;\r\n    padding: 2rem 1rem;\r\n    margin-bottom: 2rem;\r\n    border-radius: 0.3rem;\r\n  }\r\n  .banner-image {\r\n    max-width: 100%;\r\n    height: auto;\r\n    display: block;\r\n    margin: 0 auto;\r\n    position: relative;\r\n  }\r\n  \r\n  .overlay-text {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    color: black;\r\n    text-align: center;\r\n    background-color: rgba(211, 211, 211, 0.8); /* lightgray sa 80% providnosti */\r\n  }\r\n  .content {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    gap: 2rem;\r\n  }\r\n  \r\n  section {\r\n    flex: 1;\r\n    min-width: 300px;\r\n  }\r\n  \r\n  @media (max-width: 768px) {\r\n    .content {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n  \r\n\r\n  .login-form-container {\r\n    max-width: 400px;\r\n    margin: 2rem auto;\r\n    padding: 1rem;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n    border-radius: 0.5rem;\r\n  }\r\n  \r\n  .login-form {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n  \r\n  .login-form label {\r\n    margin-top: 1rem;\r\n    margin-bottom: 0.25rem;\r\n  }\r\n  \r\n  .login-form input {\r\n    padding: 0.5rem;\r\n    border: 1px solid #ccc;\r\n    border-radius: 0.25rem;\r\n  }\r\n  \r\n  .login-form button {\r\n    margin-top: 1rem;\r\n    padding: 0.5rem;\r\n    background-color: #007bff;\r\n    color: #fff;\r\n    border: none;\r\n    border-radius: 0.25rem;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .login-form button:hover {\r\n    background-color: #0056b3;\r\n  }\r\n  ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
