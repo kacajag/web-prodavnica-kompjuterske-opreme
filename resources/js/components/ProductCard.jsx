@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
  
 
-const ProductCard = ({ product  }) => {
+const ProductCard = ({ product , addToCart, removeFromCart, inCart  }) => {
   const { name, description, price, image, category } = product;
  
   const getCategoryColor = (id) => {
@@ -21,33 +21,27 @@ const ProductCard = ({ product  }) => {
         return 'default';
     }
   };
-
-
-  
-  const addToCart = () => {
-    // Implementirajte funkciju za dodavanje proizvoda u korpu
-  };
-
-  const removeFromCart = () => {
-    // Implementirajte funkciju za uklanjanje proizvoda iz korpe
-  };
+ 
 
   return (
     <div className="product-card">
       <div>
         <img src={image} alt={name} />
         <p className={`product-card-category ${getCategoryColor(product.category.id)}`}>{product.category.name}</p>
-        <h3>{name}</h3>
+        <h6><b>{name}</b></h6>
         <p>{description}</p>
         <p>{price} RSD</p>
       </div>
       <div className="product-buttons">
-        <button className="button" onClick={addToCart}>
-          +
-        </button>
-        <button className="button" onClick={removeFromCart}>
-          -
-        </button>
+        {inCart ? (
+          <button className="button" onClick={removeFromCart}>
+            Ukloni iz korpe
+          </button>
+        ) : (
+          <button className="button" onClick={addToCart}>
+            Dodaj u korpu
+          </button>
+        )}
       </div>
     </div>
   );
