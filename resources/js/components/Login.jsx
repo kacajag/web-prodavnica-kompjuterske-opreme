@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
  
 
-const Login = ({addToken}) => {
+const Login = ({addToken,addRole}) => {
     let navigate = useNavigate();
     const [userData,setUserData]=useState({
         email:"",
@@ -24,9 +24,13 @@ const Login = ({addToken}) => {
             window.sessionStorage.setItem("auth_id",res.data[0].id);
 
             addToken(res.data[0].token);
+            
             console.log(res.data[0].token);
             if(res.data[0].role === 'admin')
             {
+                window.sessionStorage.setItem("auth_name","Admin");
+                addRole("Admin");
+
                  navigate("/admin")
             }
             else{
