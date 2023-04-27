@@ -10238,11 +10238,13 @@ __webpack_require__.r(__webpack_exports__);
 var ProductGrid = function ProductGrid(_ref) {
   var products = _ref.products;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    className: "product-grid",
-    children: products.map(function (product) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        product: product
-      }, product.id);
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "product-grid",
+      children: products.map(function (product) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          product: product
+        }, product.id);
+      })
     })
   });
 };

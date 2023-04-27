@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
  
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product  }) => {
   const { name, description, price, image, category } = product;
-
+ 
   const getCategoryColor = (id) => {
     switch (id) {
       case 1:
@@ -28,6 +28,7 @@ const ProductCard = ({ product }) => {
   const removeFromCart = () => {
     // Implementirajte funkciju za uklanjanje proizvoda iz korpe
   };
+
   return (
     <div className="product-card">
       <div>
