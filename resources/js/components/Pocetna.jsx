@@ -18,7 +18,7 @@ const Pocetna = () => {
         <section>
           <h2>O nama</h2>
           <p>
-            Naša prodavnica je osnovana 20XX. godine s ciljem da ponudi najbolje kompjuterske proizvode po konkuretnim cenama. Naš asortiman uključuje najnovije modele računara, laptopova, komponenti, periferija i mnogo toga. Brzo šaljemo i pouzdano podržavamo sve naše proizvode.
+            Naša prodavnica je osnovana 2023. godine s ciljem da ponudi najbolje kompjuterske proizvode po konkuretnim cenama. Naš asortiman uključuje najnovije modele računara, laptopova, komponenti, periferija i mnogo toga. Brzo šaljemo i pouzdano podržavamo sve naše proizvode.
           </p>
         </section>
 

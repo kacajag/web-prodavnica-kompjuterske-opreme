@@ -50,7 +50,9 @@ function Navbar({token,addToken}) {
         {window.sessionStorage.getItem("auth_name")=='Admin'  ? 
             <>
             <Link to="/admin">Admin</Link>
-            <Link to="/adminDodaj">Dodaj proizvod</Link>
+            <Link to="/admin/dodaj">Dodaj proizvod</Link>
+            <Link to="/admin/productList">Proizvodi</Link>
+
 
             </>
             :

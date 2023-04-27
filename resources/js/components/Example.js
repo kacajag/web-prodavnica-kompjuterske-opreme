@@ -13,8 +13,11 @@ import axios from "axios";
 import Ponuda from './Ponuda';
 import AdminPage from './AdminPage';
 import AddProductForm from './AddProductForm';
-
-
+import ProductList from './ProductList';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+const mdbreact = require('mdbreact'); const { Button, Collapse } = mdbreact;
 const axiosInstance = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
   });
@@ -81,7 +84,8 @@ function Example() {
              <Route path="/" element={ <Pocetna></Pocetna>}></Route>
              <Route path="/login" element={ <Login addToken={setToken} addRole={setRole}></Login>}></Route>
              <Route path="/admin" element={ <AdminPage porudzbine={orders}></AdminPage>}></Route>
-             <Route path="/adminDodaj" element={ <AddProductForm></AddProductForm>}></Route>
+             <Route path="/admin/dodaj" element={ <AddProductForm></AddProductForm>}></Route>
+             <Route path="/admin/productList" element={ <ProductList products={products}></ProductList>}></Route>
             
 
              <Route path="/register" element={ <Register></Register>}></Route>
