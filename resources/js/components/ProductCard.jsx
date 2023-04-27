@@ -21,6 +21,9 @@ const ProductCard = ({ product  }) => {
         return 'default';
     }
   };
+
+
+  
   const addToCart = () => {
     // Implementirajte funkciju za dodavanje proizvoda u korpu
   };
