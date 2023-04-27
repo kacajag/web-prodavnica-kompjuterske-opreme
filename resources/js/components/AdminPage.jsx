@@ -1,34 +1,55 @@
 import React from 'react';
-
+import './AdminPage.css';
 const AdminPage = ({porudzbine}) => {
     console.log(porudzbine)
   return (
     <div>
       <h1>Admin panel</h1>
-      <div className="admin-menu">
-        <div className="admin-menu-item">
-          <h2>Proizvodi</h2>
-          <ul>
-            <li>Dodaj novi proizvod</li>
-            <li>Izmeni postojeći proizvod</li>
-            <li>Obriši proizvod</li>
-          </ul>
-        </div>
-        <div className="admin-menu-item">
-          <h2>Kategorije</h2>
-          <ul>
-            <li>Dodaj novu kategoriju</li>
-            <li>Izmeni postojeću kategoriju</li>
-            <li>Obriši kategoriju</li>
-          </ul>
-        </div>
-        <div className="admin-menu-item">
-          <h2>Narudžbine</h2>
-          <ul>
-            <li>Pregledaj narudžbine</li>
-            <li>Obradi narudžbine</li>
-          </ul>
-        </div>
+      <div className="admin">
+      <table>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>User ID</th>
+                <th>Total Price</th>
+                <th>Order Date</th>
+                <th>Order Items</th>
+                </tr>
+            </thead>
+            <tbody>
+                {porudzbine.map((order) => (
+                    <tr key={order.id}>
+                    <td>{order.id}</td>
+                    <td>{order.user_id}</td>
+                    <td>{order.total_price}</td>
+                    <td>{order.order_date}</td>
+                    <td>
+                        <table>
+                        <thead>
+                            <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {order.order_items.map((item) => (
+                            <tr key={item.id}>
+                                <td>{item.id}</td>
+                                <td>{item.product_name}</td>
+                                <td>{item.quantity}</td>
+                                <td>{item.price}</td>
+                            </tr>
+                            ))}
+                        </tbody>
+                        </table>
+                    </td>
+                    </tr>
+                ))}
+                </tbody>
+
+        </table>
       </div>
     </div>
   );

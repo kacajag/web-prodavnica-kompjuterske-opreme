@@ -19,7 +19,7 @@ class OrderResource extends JsonResource
         $orderItems = [];
         $totalPrice = 0;
         foreach($this->orderItems as $orderItem) {
-            $totalPrice += intval($orderItem->product->price);
+            $totalPrice += $orderItem->quantity*intval($orderItem->product->price);
             $orderItems[] = [
                 'id' => $orderItem->id,
                 'product_name' => $orderItem->product->name,
