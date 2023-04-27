@@ -12,14 +12,27 @@ class OrderResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
+   
     public function toArray($request)
+
     {
+        $orderItems = [];
+        $totalPrice = 0;
+        foreach($this->orderItems as $orderItem) {
+            $totalPrice += intval($orderItem->product->price);
+            $orderItems[] = [
+                'id' => $orderItem->id,
+                'product_name' => $orderItem->product->name,
+                'quantity' => $orderItem->quantity,
+                'price' => intval($orderItem->product->price),
+            ];
+        }
         return [
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'total_price' => $this->total_price,
+            'total_price' => $totalPrice,
             'order_date' => $this->order_date,
-            'order_items' => OrderItemResource::collection($this->whenLoaded('orderItems')),
+            'order_items' => $orderItems,
         ];
     }
 }

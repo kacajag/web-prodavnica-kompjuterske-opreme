@@ -69,9 +69,10 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show($id)
     {
-        //
+        $order = Order::with('orderItems.product')->findOrFail($id);
+        return new OrderResource($order);
     }
 
     /**

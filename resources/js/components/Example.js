@@ -11,6 +11,7 @@ import Register from './Register';
 import Kontakt from './Kontakt';
 import axios from "axios";
 import Ponuda from './Ponuda';
+import AdminPage from './AdminPage';
 
 
 const axiosInstance = axios.create({
@@ -20,6 +21,7 @@ function Example() {
     const[token,setToken] = useState();
 
     const [products,setProducts] = useState([ ]);
+    const [orders,setOrders] = useState([ ]);
 
 
 
@@ -44,7 +46,25 @@ function Example() {
       }, [ axiosInstance]);
 
 
-
+      useEffect(() => {
+        const getOrders = async () => {
+          try {
+            const res = await axiosInstance.get( "http://127.0.0.1:8000/api/orders",
+              {
+                headers: 
+                {
+                    'Authorization': `Bearer ${window.sessionStorage.getItem("auth_token")}`
+                }
+              }
+            );
+            setOrders(res.data.data);
+            console.log(res.data.data)
+          } catch (err) {
+            console.log(err);
+          }
+        };
+        getOrders();
+      }, [ axiosInstance]);
 
 
 
@@ -58,6 +78,7 @@ function Example() {
              <Routes>
              <Route path="/" element={ <Pocetna></Pocetna>}></Route>
              <Route path="/login" element={ <Login addToken={setToken}></Login>}></Route>
+             <Route path="/admin" element={ <AdminPage porudzbine={orders}></AdminPage>}></Route>
             
 
              <Route path="/register" element={ <Register></Register>}></Route>
