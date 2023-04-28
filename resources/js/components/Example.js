@@ -85,7 +85,7 @@ function Example() {
              <Route path="/login" element={ <Login addToken={setToken} addRole={setRole}></Login>}></Route>
              <Route path="/admin" element={ <AdminPage porudzbine={orders}></AdminPage>}></Route>
              <Route path="/admin/dodaj" element={ <AddProductForm></AddProductForm>}></Route>
-             <Route path="/admin/productList" element={ <ProductList products={products}></ProductList>}></Route>
+             <Route path="/admin/productList" element={ <ProductList products={products} setProducts={setProducts}></ProductList>}></Route>
             
 
              <Route path="/register" element={ <Register></Register>}></Route>

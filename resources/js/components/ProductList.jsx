@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Table } from 'react-bootstrap';
 import { MDBDataTableV5 } from 'mdbreact';
-const ProductList = ({products}) => {
+const ProductList = ({products,setProducts}) => {
  
 
   const handleDelete = async (productId) => {
@@ -61,7 +61,7 @@ const ProductList = ({products}) => {
       )
     }))
   };
-  return <div className='tabelaProducts'><MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={datatable} /></div>;
+  return <div className='tabelaProducts'><MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={10} pagesAmount={4} data={datatable} /></div>;
 
 };
 
