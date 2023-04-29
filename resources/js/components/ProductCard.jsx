@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
  
 
-const ProductCard = ({ product , addToCart, removeFromCart, inCart  }) => {
+const ProductCard = ({ product , addToCart, removeFromCart, inCart,selectedCurrency, RSD_EUR,RSD_USD   }) => {
   const { name, description, price, image, category } = product;
- 
+
   const getCategoryColor = (id) => {
     switch (id) {
       case 1:
@@ -30,7 +30,25 @@ const ProductCard = ({ product , addToCart, removeFromCart, inCart  }) => {
         <p className={`product-card-category ${getCategoryColor(product.category.id)}`}>{product.category.name}</p>
         <h6><b>{name}</b></h6>
         <p>{description}</p>
-        <p>{price} RSD</p>
+        <p>
+          {selectedCurrency=="RSD"?
+          
+              <>
+                {price.toFixed(2)} {selectedCurrency}
+              </>
+            :
+             selectedCurrency=="EUR"?
+             <>
+                  {(price / RSD_EUR).toFixed(2)} {selectedCurrency}
+             </>
+             
+             :
+             <>
+                {(price / RSD_USD).toFixed(2)} {selectedCurrency}
+             </>
+        }
+
+        </p>
       </div>
       <div className="product-buttons">
         {inCart ? (
