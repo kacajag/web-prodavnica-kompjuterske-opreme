@@ -40,6 +40,8 @@ const Register = () => {
    
     let newUserData = userData; 
  
+
+
     newUserData[e.target.name]=e.target.value;
     console.log(newUserData);
     //console.log(newUserData);//probaj

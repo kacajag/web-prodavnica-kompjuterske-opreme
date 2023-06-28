@@ -22,7 +22,8 @@ const AddProductForm = () => {
       const response = await axios.post('/api/products', formData);
       console.log(response.data);
       alert("USPESNO DODATO")
-      // Dodat proizvod u bazu
+      //TODO DOPUNI NIZ SA SETPRODUCTS
+      
     } catch (error) {
       console.error(error);
     }

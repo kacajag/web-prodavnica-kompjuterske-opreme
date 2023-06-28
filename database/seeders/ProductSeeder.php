@@ -35,7 +35,7 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Gaming mouse',
                 'description' => 'High-performance gaming mouse with customizable buttons',
-                'price' => 80,
+                'price' => 800,
                 'category_id' => $categories->get(2)->id,
                 'image'=>'https://www.popsci.com/uploads/2020/12/08/IAA4EDIINRCGNHCCUQU2U634GQ.jpg?auto=webp',
             ],

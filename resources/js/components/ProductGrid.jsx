@@ -88,6 +88,9 @@ const ProductGrid = ({ products }) => {
   const handleSearchChange = event => {
     setSearch(event.target.value);
   };
+
+
+  
   const [cartOpen, setCartOpen] = useState(false);
 
   const handleCartOpen = () => {

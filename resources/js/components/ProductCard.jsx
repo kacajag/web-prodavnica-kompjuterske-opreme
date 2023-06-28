@@ -34,7 +34,7 @@ const ProductCard = ({ product , addToCart, removeFromCart, inCart,selectedCurre
           {selectedCurrency=="RSD"?
           
               <>
-                {price.toFixed(2)} {selectedCurrency}
+                {price } {selectedCurrency}
               </>
             :
              selectedCurrency=="EUR"?
